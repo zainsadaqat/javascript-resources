@@ -29,4 +29,3 @@ const reduceContent = items.reduce((currentTotal, item) => {
 // Includes, It checks if the specified item is in the array or not
 const includeContent = items.map((item) => item.name.includes("Bike5"));
 
-console.log(includeContent);
