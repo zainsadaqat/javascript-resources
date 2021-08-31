@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 const myPromise = new Promise((resolve, reject) => {
   if (false) {
     setTimeout(() => {
@@ -11,3 +12,11 @@ const myPromise = new Promise((resolve, reject) => {
 myPromise
   .then((value) => console.log(value))
   .catch((rejectValue) => console.log(rejectValue));
+
+const myAsyncAwait = async () => {
+  const result = await fetch('https://swapi.dev/api/people');
+  const response = await result.json();
+  console.log(response[0]);
+};
+
+myAsyncAwait();
