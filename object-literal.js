@@ -16,9 +16,14 @@ const objectLiteral = {
 
   getAge: () => {
     return this.age;
+  },
+
+  getName: function () {
+    return this.name;
   }
 };
 
 objectLiteral.printData();
 objectLiteral.printSkills();
 console.log(objectLiteral.getAge());
+console.log("Name: ", objectLiteral.getName());
