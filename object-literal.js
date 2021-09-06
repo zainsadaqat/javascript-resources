@@ -13,7 +13,12 @@ const objectLiteral = {
       console.log(`${index + 1}. ${skill.toUpperCase()}`)
     );
   },
+
+  getAge: () => {
+    return this.age;
+  }
 };
 
 objectLiteral.printData();
 objectLiteral.printSkills();
+console.log(objectLiteral.getAge());
