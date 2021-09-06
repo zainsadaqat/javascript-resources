@@ -10,7 +10,7 @@ const items = [
 ];
 
 // Filter, it filters out and return the items which pass through the condition
-const filteredContent = items.filter((i) => i.price > 500);
+const deleteItem = items.filter(item => item.name === 'Bike3');
 // Map, it returns a copy of an array
 const mapContent = items.map((i) => i.name);
 // Find, it's going to return very first item it'll find
