@@ -50,3 +50,10 @@ _where something sits physically in the code you write_
 ## Execution Context
 _A wrapper to help manage the code that is running_ 
 > There're a lot of lexical environments. Which one currently running is managed via execution contexts. It can contain things beyond what you've written in your code.
+
+## Conceptual Aside
+_Name/Value Pairs and Objects_
+> **Name Value Pair:** A name which maps to a unique value.
+The name may be defined more than once, but only can have one value in any given context. That value may be more name/value pairs.
+
+> **Object:** A collection of name value pairs. 
