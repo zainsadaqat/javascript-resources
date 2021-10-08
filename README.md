@@ -38,3 +38,15 @@
 
 
 `console.log(restOperator(2,4,6,1,9));`
+
+## Syntax Parser
+_Your code isn't magic. Someone else wrote a program to translate it for the computer_
+> A program that reads your code and determines what it does and its grammar is valid.
+
+## Lexical Environment
+_where something sits physically in the code you write_
+> `Lexical` means having to do with words or grammar. A lexical environment exists in programming language in which where you write something is important.
+
+## Execution Context
+_A wrapper to help manage the code that is running_ 
+> There're a lot of lexical environments. Which one currently running is managed via execution contexts. It can contain things beyond what you've written in your code.
