@@ -1,8 +1,8 @@
 # JavaScript Concepts - Revise your JavaScript concepts
 
-> If you're already familiar with JavaScript and want to revise JavaScript concepts then this repository is for you. We're using modern javascript (ES6) syntax. Kindly open an Issue if you notice anything **wrong** or **Incorrect**. 
+> If you're already familiar with JavaScript and want to revise JavaScript concepts then this repository can be helpful for you. We're using modern javascript (ES6) syntax. Kindly open an Issue if you notice anything **wrong** or **Incorrect**. 
 
-> If it helps you then don't forget to give it a **STAR** ⭐️ and **SHARE** it with your close friends. 
+> If it helps you then don't forget to give it a **STAR** ⭐️ and **SHARE** it with your JavaScript friends. 
 
 ## The Three Dots (...) Difference between Spread and Rest Operator 
 
@@ -36,8 +36,48 @@
 
 `}`
 
-
 `console.log(restOperator(2,4,6,1,9));`
+
+## Asynchronous JavaScript
+
+### Callbacks
+
+```
+setTimeout(() => {
+ console.log("3");
+ setTimeout(() => {
+  console.log("2");
+  setTimeout(() => {
+   console.log("1");
+  }, 1000)
+ }, 1000)
+}, 1000)
+```
+
+### Promises
+
+```
+const myPromise = new Promise((resolve, reject) => {
+const randValue = Math.floor(Math.rand() * 2);
+if(randValue === 0) resolve();
+else reject();
+})
+
+myPromise.then(() => console.log("Success")).catch(() => console.log("Fail"));
+```
+
+### Async Await
+
+```
+const myFunction = async () => {
+try {
+ const response = await fetch();
+ const data = await response.data;
+} catch(error) {
+ console.error(error);
+ }
+} 
+```
 
 ## Syntax Parser
 _Your code isn't magic. Someone else wrote a program to translate it for the computer_
