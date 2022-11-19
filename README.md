@@ -14,6 +14,9 @@
 
 `console.log(spreadOperator(...myArray));  // spreadOperator(2,4,6,1,9);`
 
+<img width="429" alt="Screenshot 2022-11-20 at 12 33 56 AM" src="https://user-images.githubusercontent.com/83048208/202868283-f35e9dc2-471b-4400-be7d-a94ad3503a8e.png">
+
+
 
 
 ### Rest Operator
