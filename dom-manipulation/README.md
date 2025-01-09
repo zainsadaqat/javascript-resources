@@ -73,9 +73,11 @@ To make your webpage interactive, you need to respond to user actions using even
 
 #### Add an Event Listener
 
-`.addEventListener('click', () => {
+```
+.addEventListener('click', () => {
     alert('Button clicked!');
-});`
+});
+```
 
 #### Remove an Event Listener
 
@@ -83,7 +85,7 @@ To make your webpage interactive, you need to respond to user actions using even
 
 ### For Example: To-do List
 
-`html
+```
 
 <div>
    <input id="taskInput" type="text" placeholder="Enter a task" />
@@ -91,9 +93,9 @@ To make your webpage interactive, you need to respond to user actions using even
 </div>
 
 <ul id="taskList"></ul>
-`
+```
 
-`js
+```
 
 <!-- Select the required elements -->
 
@@ -112,7 +114,7 @@ listItem.textContent = inputField.value;
     inputField.value = "";
 
 })
-`
+```
 
 ### Advance DOM Manipulation
 
@@ -124,7 +126,7 @@ Event delegation is a technique where you add an event listener to a parent elem
 
 For Example: Let’s say you have a list of items, and clicking on any item should log its text. New items might also be added dynamically.
 
-`html
+```
 
 <ul id="itemList">
     <li>Item 1</li>
@@ -132,9 +134,9 @@ For Example: Let’s say you have a list of items, and clicking on any item shou
     <li>Item 3</li>
 </ul>
 <button id="addItem">Add Item</button>
-`
+```
 
-`js
+```
 // Access parent element
 const itemList = document.getElementById('itemList');
 
@@ -154,4 +156,4 @@ const newItem = document.createElement('li');
 newItem.textContent = `Item ${itemCount}`;
 itemList.appendChild(newItem);
 });
-`
+```
