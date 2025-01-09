@@ -73,7 +73,7 @@ To make your webpage interactive, you need to respond to user actions using even
 
 #### Add an Event Listener
 
-```
+```js
 .addEventListener('click', () => {
     alert('Button clicked!');
 });
@@ -85,35 +85,32 @@ To make your webpage interactive, you need to respond to user actions using even
 
 ### For Example: To-do List
 
-```
-
+```html
 <div>
-   <input id="taskInput" type="text" placeholder="Enter a task" />
-   <button id="addTaskButton">Add Task</button>
+  <input id="taskInput" type="text" placeholder="Enter a task" />
+  <button id="addTaskButton">Add Task</button>
 </div>
 
 <ul id="taskList"></ul>
 ```
 
-```
+```js
+// Select the required elements
 
-<!-- Select the required elements -->
+const inputField = document.querySelector("#taskInput");
+const submitButton = document.querySelector("#addTaskButton");
+const taskListContainer = document.querySelector("#taskList");
 
-const inputField = document.querySelector('#taskInput');
-const submitButton = document.querySelector('#addTaskButton');
-const taskListContainer = document.querySelector('#taskList');
-
-<!-- Apply Click Event Listener on Submit Button -->
+// Apply Click Event Listener on Submit Button
 
 submitButton.addEventListener("click", () => {
-const listItem = document.createElement("li");
-listItem.textContent = inputField.value;
+  const listItem = document.createElement("li");
+  listItem.textContent = inputField.value;
 
-    taskListContainer.append(listItem);
+  taskListContainer.append(listItem);
 
-    inputField.value = "";
-
-})
+  inputField.value = "";
+});
 ```
 
 ### Advance DOM Manipulation
@@ -124,36 +121,38 @@ When building a dynamic webpage, you may need to handle events for multiple elem
 
 Event delegation is a technique where you add an event listener to a parent element instead of multiple child elements. This works because events in the DOM bubble up from the target element to its ancestors.
 
-For Example: Let’s say you have a list of items, and clicking on any item should log its text. New items might also be added dynamically.
+#### For Example
 
-```
+Let’s say you have a list of items, and clicking on any item should log its text. New items might also be added dynamically.
 
+```html
 <ul id="itemList">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
 </ul>
 <button id="addItem">Add Item</button>
 ```
 
-```
+```js
 // Access parent element
-const itemList = document.getElementById('itemList');
+const itemList = document.getElementById("itemList");
 
 // Add event listener to the parent
-itemList.addEventListener('click', (event) => {
-if (event.target.tagName === 'LI') { // Check if the clicked element is a list item
-console.log(`You clicked: ${event.target.textContent}`);
-}
+itemList.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    // Check if the clicked element is a list item
+    console.log(`You clicked: ${event.target.textContent}`);
+  }
 });
 
 // Add new items dynamically
-const addItemButton = document.getElementById('addItem');
+const addItemButton = document.getElementById("addItem");
 let itemCount = 3;
-addItemButton.addEventListener('click', () => {
-itemCount++;
-const newItem = document.createElement('li');
-newItem.textContent = `Item ${itemCount}`;
-itemList.appendChild(newItem);
+addItemButton.addEventListener("click", () => {
+  itemCount++;
+  const newItem = document.createElement("li");
+  newItem.textContent = `Item ${itemCount}`;
+  itemList.appendChild(newItem);
 });
 ```
