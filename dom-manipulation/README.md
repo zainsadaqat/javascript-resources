@@ -156,3 +156,5 @@ addItemButton.addEventListener("click", () => {
   itemList.appendChild(newItem);
 });
 ```
+
+DOM HTML Elements: `https://www.w3schools.com/jsref/dom_obj_all.asp`
