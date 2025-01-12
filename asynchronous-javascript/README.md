@@ -39,4 +39,67 @@ const myOrder = (order, callback) => {
 myOrder("Peri Peri Pizza", () => {
   console.log("Your order is ready!");
 });
+
+// OR To make It More Dynamic
+
+const myOrder = (order, callback) => {
+  setTimeout(() => {
+    callback(order);
+  }, 1000);
+};
+
+myOrder("Peri Peri Pizza", (order) => {
+  console.log(`Your order: ${order} is ready!`);
+});
+```
+
+### Promises
+
+A promise is like a placeholder for a value that will be available in the future. It has three states:
+
+- Pending: The promise is still waiting.
+- Resolved: The promise is fulfilled (task succeeded).
+- Rejected: The promise failed.
+
+```js
+const myOrder = (order) => {
+  return new Promise((resolve, reject) => {
+    if (order) {
+      resolve(`${order} is ready!`);
+    } else {
+      reject(`${order} has been cancelled!`);
+    }
+  });
+};
+
+myOrder("Peri Peri Pizza")
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
+```
+
+### async/await
+
+This is a cleaner way to work with promises, making asynchronous code look synchronous.
+
+```js
+const myOrder = async (order) => {
+  return new Promise((resolve, reject) => {
+    if (order) {
+      resolve(`${order} is ready`);
+    } else {
+      reject(`${order} has been cancelled`);
+    }
+  });
+};
+
+const myOrderResult = async () => {
+  try {
+    const response = await myOrder("Peri Peri Pizza");
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+myOrderResult();
 ```
