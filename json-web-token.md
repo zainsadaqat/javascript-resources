@@ -20,3 +20,36 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTY3ODkwIiwiZXhwIjoxNjE
 
 When you see the term “Bearer” in the context of an HTTP Authorization header, it means that the client is presenting a token (in our case, usually a JWT) as proof of authentication.
 
+The client sends the token in the Authorization header like this
+
+```
+Authorization: Bearer <token>
+```
+
+This header tells the server, “I am the bearer of this token, please use it to verify my identity.
+
+## Communicating with an API Using a Bearer Token
+
+When your student logs in or registers using the provided API endpoints, the API will likely return a JWT token. The typical flow is:
+
+### Login/Register
+
+The client sends credentials (username, password, etc.) to the API endpoint (e.g., /user-registration or /login).
+The server validates the credentials.
+On success, the server returns a JWT token in the response (often in JSON).
+
+### Storing the Token
+The client can store this token in a place like localStorage or a cookie.
+
+```js
+const getJWTToken = async () => {
+const response = await fetch('https://api.example.com/login', {
+method: "POST",
+headers: { 'Content-Type' : 'application/json' },
+body: JSON.stringify({ username, password })
+});
+
+const data = await response.json();
+return data.token;
+}
+```
