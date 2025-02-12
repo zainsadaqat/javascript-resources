@@ -54,3 +54,27 @@ localStorage.setItem("token", data.token);
 return data.token;
 }
 ```
+
+### Using the Token in Subsequent API Calls
+
+When making API calls that require authentication, you include the token in the Authorization header.
+
+```js
+// Retrieve the token from localStorage
+const token = localStorage.getItem('token');
+
+fetch('https://api.example.com/create-post', {
+method: "POST",
+headers: { 
+'Content-Type': 'application/json', 
+'Authorization': `Bearer ${token}`
+},
+body: JSON.stringify({ title, content })
+});
+```
+
+In the code above:
+We retrieve the token from localStorage.
+We then include it in the Authorization header with the word Bearer followed by a space and then the token.
+The server will check this token to see if it is valid and determine if the request should be allowed.
+
