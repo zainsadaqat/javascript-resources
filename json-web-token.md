@@ -50,6 +50,7 @@ body: JSON.stringify({ username, password })
 });
 
 const data = await response.json();
+localStorage.setItem("token", data.token);
 return data.token;
 }
 ```
