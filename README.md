@@ -1,4 +1,4 @@
-# JavaScript Concepts - Revise your JavaScript concepts
+# JavaScript Concepts - Revise your JavaScript concepts 
  
 > If you're already familiar with JavaScript and want to revise JavaScript concepts then this repository can be helpful for you. We're using modern javascript (ES6) syntax. Kindly open an Issue if you notice anything **wrong** or **Incorrect**. 
 
