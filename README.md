@@ -1,6 +1,6 @@
 # JavaScript Concepts - Revise your JavaScript concepts         
  
-> If you're already familiar with JavaScript and want to revise JavaScript concepts then this repository can be helpful for you. We're using modern javascript (ES6) syntax. Kindly open an Issue if you notice anything **wrong** or **Incorrect**.  
+> If you're already familiar with JavaScript and want to revise JavaScript concepts then this repository can be helpful for you. We're using modern javascript (ES6) syntax. Kindly open an Issue if you notice anything **wrong** or **Incorrect**.   
 
 > If it helps you then don't forget to give it a **STAR** ⭐️ and **SHARE** it with your JavaScript friends. 
 
