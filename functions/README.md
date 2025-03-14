@@ -88,3 +88,18 @@ console.log(subtract(10, 4)); // Output: 6
 
 - Function doesn’t have a name (it’s anonymous).
 - Stored inside a variable, so we call it using subtract(10,4);.
+
+## 📌 Arrow Functions (Modern & Shorter)
+
+Introduced in ES6, arrow functions make code shorter and cleaner.
+
+```js
+const divide = (a, b) => a / b;
+console.log(divide(10, 2)); // Output: 5
+```
+
+### 📝 How It Works?
+
+- Removes function keyword.
+- Uses => (arrow) instead.
+- If there’s only one line, {} and return can be omitted.
